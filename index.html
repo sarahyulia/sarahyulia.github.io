@@ -1,66 +1,50 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Web | Portofolio</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="sidebar">
-        <nav>
-          <ul>
-            <li><a href="">About</a></li>
-            <li><a href="">Portofolio</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-      <main class="content">
-        <section class="hero">
-          <img src="online.png" alt="" />
-          <div class="hero-content">
-            <h1>Profesi</h1>
-            <br />
-            <h2>Junior Content Writer at Dicoding</h2>
-            <br /><br />
-            <p>
-              Selamat datang di website kami!!!
-              Halo! kami seorang Full Stack Developer yang bersemangat dalam membangun aplikasi web dan solusi teknologi yang inovatif.
-Dengan lebih dari 3 tahun pengalaman dalam pengembangan perangkat lunak,
-kami memiliki keahlian dalam berbagai teknologi seperti HTML, CSS, dan JavaScript.
-Sebagai pengembang, kami sangat menghargai prinsip open-source dan selalu mencari kesempatan untuk berkontribusi
-pada proyek-proyek di GitHub. kami percaya bahwa berbagi pengetahuan dan berkolaborasi dalam 
-pengembangan perangkat lunak adalah cara terbaik untuk tumbuh sebagai
-developer dan memberikan manfaat bagi komunitas pengembang di seluruh dunia.
-  
-            </p>
-            <a href="" class="action-btn">Profile Kami</a>
-          </div>
-        </section>
-      </main>
-      <div class="footer">
-        <footer>
-          <ul>
-            <li>
-              <img src="instagram.png" alt="" /><a><p>Instagram</p></a>
-            </li>
-            <li>
-              <img src="facebook.png" alt="" /><a><p>Facebook</p></a>
-            </li>
-            <li>
-              <img src="twitter.png" alt="" /><a><p>Twitter</p></a>
-            </li>
-            <li>
-              <img src="telegram.png" alt="" /><a><p>Telegram</p></a>
-            </li>
-          </ul>
-        </footer>
-      </div>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplikasi Kasir Sederhana</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Aplikasi Kasir</h1>
+    <div class="form-group">
+      <label for="item-name">Nama Barang:</label>
+      <input type="text" id="item-name" placeholder="Nama barang">
     </div>
-  </body>
+    <div class="form-group">
+      <label for="item-price">Harga Barang (Rp):</label>
+      <input type="number" id="item-price" placeholder="Harga barang">
+    </div>
+    <div class="form-group">
+      <label for="item-quantity">Jumlah Barang:</label>
+      <input type="number" id="item-quantity" placeholder="Jumlah barang" min="1" value="1">
+    </div>
+    <button onclick="addItem()">Tambah Barang</button>
+
+    <h2>Daftar Belanja:</h2>
+    <table id="item-list">
+      <thead>
+        <tr>
+          <th>Nama Barang</th>
+          <th>Harga (Rp)</th>
+          <th>Jumlah</th>
+          <th>Total (Rp)</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- List of items will be added here -->
+      </tbody>
+    </table>
+
+    <div class="total">
+      <p>Total Belanja: <span id="total-price">Rp 0</span></p>
+    </div>
+    <button onclick="clearCart()">Kosongkan Keranjang</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
 </html>
