@@ -1,23 +1,34 @@
-const qtyInputs = document.querySelectorAll('.qty');
-const totalBayarEl = document.getElementById('total-bayar');
+// script.js
+let totalAmount = 0;
 
-qtyInputs.forEach(input => {
-  input.addEventListener('input', updateTotal);
-});
+function addItem() {
+    const item = document.getElementById('item').value;
+    const price = parseFloat(document.getElementById('price').value);
+    const quantity = parseInt(document.getElementById('quantity').value);
 
-function updateTotal() {
-  let total = 0;
-  document.querySelectorAll('.qty').forEach(input => {
-    const price = input.getAttribute('data-price');
-    const quantity = input.value;
-    const subTotal = price * quantity;
-    input.closest('tr').querySelector('.sub-total').textContent = subTotal;
-    total += parseInt(subTotal);
-  });
-  totalBayarEl.textContent = total;
+    if (item && !isNaN(price) && !isNaN(quantity)) {
+        const total = price * quantity;
+
+        const cartTableBody = document.querySelector('#cart tbody');
+        const newRow = document.createElement('tr');
+
+        newRow.innerHTML = `
+            <td>${item}</td>
+            <td>Rp ${price.toFixed(2)}</td>
+            <td>${quantity}</td>
+            <td>Rp ${total.toFixed(2)}</td>
+        `;
+
+        cartTableBody.appendChild(newRow);
+
+        totalAmount += total;
+        document.getElementById('totalAmount').innerText = totalAmount.toFixed(2);
+
+        // Clear input fields
+        document.getElementById('item').value = '';
+        document.getElementById('price').value = '';
+        document.getElementById('quantity').value = '';
+    } else {
+        alert("Silakan masukkan data yang valid!");
+    }
 }
-
-document.getElementById('bayar-button').addEventListener('click', (e) => {
-  e.preventDefault();
-  alert(`Total yang harus dibayar: Rp ${totalBayarEl.textContent}`);
-});
