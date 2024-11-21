@@ -1,13 +1,108 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contoh Ganti Warna Background dan Font</title>
-    <link rel="stylesheet" href="style.css"> <!-- Menghubungkan file CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Restoran</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Selamat Datang di Website Kami</h1>
-    <p>Ini adalah contoh mengganti warna background dan font menggunakan CSS.</p>
+  <header>
+    <h1>Menu Restoran Lezat</h1>
+    <nav>
+      <ul>
+        <li><a href="#appetizers">Appetizers</a></li>
+        <li><a href="#main-course">Main Course</a></li>
+        <li><a href="#desserts">Desserts</a></li>
+        <li><a href="#drinks">Drinks</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="appetizers">
+    <h2>Appetizers</h2>
+    <div class="menu-item">
+      <img src="appetizer1.jpg" alt="Appetizer 1">
+      <div class="item-description">
+        <h3>Spring Rolls</h3>
+        <p>Crispy rolls filled with vegetables and served with dipping sauce.</p>
+        <p class="price">Rp 25.000</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="appetizer2.jpg" alt="Appetizer 2">
+      <div class="item-description">
+        <h3>Bruschetta</h3>
+        <p>Grilled bread topped with tomatoes, basil, and garlic.</p>
+        <p class="price">Rp 30.000</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="main-course">
+    <h2>Main Course</h2>
+    <div class="menu-item">
+      <img src="maincourse1.jpg" alt="Main Course 1">
+      <div class="item-description">
+        <h3>Grilled Chicken</h3>
+        <p>Succulent grilled chicken served with mashed potatoes and vegetables.</p>
+        <p class="price">Rp 70.000</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="maincourse2.jpg" alt="Main Course 2">
+      <div class="item-description">
+        <h3>Beef Steak</h3>
+        <p>Juicy steak cooked to perfection with side salad and fries.</p>
+        <p class="price">Rp 120.000</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="desserts">
+    <h2>Desserts</h2>
+    <div class="menu-item">
+      <img src="dessert1.jpg" alt="Dessert 1">
+      <div class="item-description">
+        <h3>Chocolate Lava Cake</h3>
+        <p>Rich chocolate cake with molten center served with vanilla ice cream.</p>
+        <p class="price">Rp 45.000</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="dessert2.jpg" alt="Dessert 2">
+      <div class="item-description">
+        <h3>Fruit Tart</h3>
+        <p>Sweet pastry crust filled with cream and topped with fresh fruits.</p>
+        <p class="price">Rp 40.000</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="drinks">
+    <h2>Drinks</h2>
+    <div class="menu-item">
+      <img src="drink1.jpg" alt="Drink 1">
+      <div class="item-description">
+        <h3>Mango Smoothie</h3>
+        <p>Freshly blended mango smoothie with a touch of lime.</p>
+        <p class="price">Rp 30.000</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="drink2.jpg" alt="Drink 2">
+      <div class="item-description">
+        <h3>Coffee</h3>
+        <p>Rich, aromatic coffee served hot or iced.</p>
+        <p class="price">Rp 20.000</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Restoran Lezat</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
