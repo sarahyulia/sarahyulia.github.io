@@ -1,49 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kasir Sederhana</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Kasir</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Aplikasi Kasir</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>Item</th>
-          <th>Harga</th>
-          <th>Jumlah</th>
-          <th>Total</th>
-        </tr>
-      </thead>
-      <tbody id="kasir-body">
-        <tr>
-          <td>Kopi</td>
-          <td>15000</td>
-          <td><input type="number" value="0" min="0" class="qty" data-price="15000"></td>
-          <td class="sub-total">0</td>
-        </tr>
-        <tr>
-          <td>Teh</td>
-          <td>10000</td>
-          <td><input type="number" value="0" min="0" class="qty" data-price="10000"></td>
-          <td class="sub-total">0</td>
-        </tr>
-        <tr>
-          <td>Roti</td>
-          <td>20000</td>
-          <td><input type="number" value="0" min="0" class="qty" data-price="20000"></td>
-          <td class="sub-total">0</td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="total">
-      <strong>Total Bayar: Rp <span id="total-bayar">0</span></strong>
-    </div>
-    <a href="#" class="button" id="bayar-button">Bayar</a>
-  </div>
-  <script src="script.js"></script>
+    <header>
+        <h1>Selamat Datang di Sistem Kasir</h1>
+    </header>
+    
+    <main>
+        <section class="input-section">
+            <h2>Input Transaksi</h2>
+            <input type="text" id="item" placeholder="Nama Barang">
+            <input type="number" id="price" placeholder="Harga Barang">
+            <input type="number" id="quantity" placeholder="Jumlah">
+            <button onclick="addItem()">Tambah Item</button>
+        </section>
+
+        <section class="cart-section">
+            <h2>Keranjang Belanja</h2>
+            <table id="cart">
+                <thead>
+                    <tr>
+                        <th>Nama Barang</th>
+                        <th>Harga</th>
+                        <th>Jumlah</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="total">
+                Total: Rp <span id="totalAmount">0</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 Web Kasir
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
