@@ -7,14 +7,14 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: blue;
+  color: white;
   line-height: 1.6;
 }
 
 /* Header styling */
 header {
-  background-color: #333;
+  background-color: blue;
   color: white;
   text-align: center;
   padding: 20px 0;
