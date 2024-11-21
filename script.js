@@ -1,10 +1,9 @@
-// JavaScript bisa ditambahkan untuk interaksi lebih lanjut, misalnya, jika Anda ingin
-// menambahkan fungsi seperti "add to cart" atau menampilkan alert saat pengguna memilih menu.
-
-// Contoh: Alert ketika klik pada item menu
-document.querySelectorAll('.menu-item').forEach(item => {
-  item.addEventListener('click', function() {
-    const itemName = this.querySelector('h3').innerText;
-    alert(`Anda memilih ${itemName}`);
+// JavaScript untuk menambahkan interaktivitas
+document.querySelectorAll('table tr').forEach(row => {
+  row.addEventListener('click', function() {
+    const itemName = this.cells[0]?.textContent || ''; // Ambil nama makanan/minuman
+    if (itemName) {
+      alert(`Anda memilih ${itemName}`);
+    }
   });
 });
